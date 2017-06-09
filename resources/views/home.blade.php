@@ -53,7 +53,7 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-default" id="nav_bar">
+        <nav class="navbar navbar-default navbar-fixed-top" id="nav_bar">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -83,7 +83,7 @@
             <img src="/assets/images/shapes/poly2.png" alt="Poly2" class="shape2">
             <img src="/assets/images/shapes/poly1.png" alt="Poly1" class="shape3">
             <!-- HOME -->
-            <div id="home">
+            <div class="target" id="home">
                 <div class="line"></div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-content">
                     <p class="sub-header">OUR NEXT PROJECT:</p>
@@ -98,7 +98,7 @@
             </div>
 
             <!-- ABOUT -->
-            <div id="about" class="container-fluid">
+            <div id="about" class="container-fluid target">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-content">
                     <p>Expand your brand's reach today, take it to the clouds! We'll be happy to do the heavy lifting (coding) for you!</p>
                     <hr>
@@ -130,7 +130,7 @@
             </div>
 
             <!-- PRODUCTS -->
-            <div id="products" class="container-fluid">
+            <div id="products" class="container-fluid target">
                 <div class="single-item">
 
                     <!-- Wrapper for slides -->
@@ -162,7 +162,7 @@
             </div>
 
             <!-- PARTNERS -->
-            <div id="partners">
+            <div id="partners" class="target">
                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-content">
                     <p class="text-header">Customer Feedback</p>
                     <hr><br>
@@ -185,7 +185,7 @@
             </div>
 
             <!-- CONTACT US -->
-            <div id="contact-us" class="container-fluid">
+            <div id="contact-us" class="container-fluid target">
                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-content">
                     <p class="text-header">Get a Free Consultation</p>
                     <hr><br>
@@ -286,18 +286,53 @@
                     }
                 });
 
-                $(window).scroll(function () {
 
-                    console.log($(window).scrollTop());
+                // Cache selectors
+                var lastId,
+                 topMenu = $("#nav_bar"),
+                 topMenuHeight = topMenu.outerHeight()+1,
+                 // All list items
+                 menuItems = topMenu.find("a"),
+                 // Anchors corresponding to menu items
+                 scrollItems = menuItems.map(function(){
+                   var item = $($(this).attr("href"));
+                    if (item.length) { return item; }
+                 });
 
-                    if ($(window).scrollTop() > 26) {
-                        $('#nav_bar').addClass('navbar-fixed-top');
-                    }
-
-                    if ($(window).scrollTop() < 27) {
-                        $('#nav_bar').removeClass('navbar-fixed-top');
-                    }
+                // Bind click handler to menu items
+                // so we can get a fancy scroll animation
+                menuItems.click(function(e){
+                  var href = $(this).attr("href"),
+                      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+                  $('html, body').stop().animate({
+                      scrollTop: offsetTop
+                  }, 850);
+                  e.preventDefault();
                 });
+
+                // Bind to scroll
+                $(window).scroll(function(){
+                   // Get container scroll position
+                   var fromTop = $(this).scrollTop()+topMenuHeight;
+
+                   // Get id of current scroll item
+                   var cur = scrollItems.map(function(){
+                     if ($(this).offset().top < fromTop)
+                       return this;
+                   });
+                   // Get the id of the current element
+                   cur = cur[cur.length-1];
+                   var id = cur && cur.length ? cur[0].id : "";
+
+                   if (lastId !== id) {
+                       lastId = id;
+                       // Set/remove active class
+                       menuItems
+                         .parent().removeClass("active")
+                         .end().filter("[href=\\#"+id+"]").parent().addClass("active");
+                   }
+                });
+
 
             })
 

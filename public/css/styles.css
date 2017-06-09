@@ -103,7 +103,10 @@ body div.section-parent {
 .navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
     color: #F3801E !important;
 }
-
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #f87616;
+    background-color: #eee;
+}
 p {
     letter-spacing: 2px;
 }
@@ -216,6 +219,7 @@ p {
 .gm-style-mtc {
   display: none !important;
 }
+
 /* section home styles
 -------------------------------------------------- */
 #home {
