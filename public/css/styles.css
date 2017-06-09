@@ -1,0 +1,704 @@
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url('fonts/Lato-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-BlackItalic';
+    src: url('fonts/Lato-BlackItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('fonts/Lato-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-BoldItalic';
+    src: url('fonts/Lato-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Heavy';
+    src: url('fonts/Lato-Heavy.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-HeavyItalic';
+    src: url('fonts/Lato-HeavyItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Italic';
+    src: url('fonts/Lato-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-LightItalic';
+    src: url('fonts/Lato-LightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Medium';
+    src: url('fonts/Lato-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-MediumItalic';
+    src: url('fonts/Lato-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Semibold';
+    src: url('fonts/Lato-Semibold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-SemiboldItalic';
+    src: url('fonts/Lato-SemiboldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Thin';
+    src: url('fonts/Lato-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-ThinItalic';
+    src: url('fonts/Lato-ThinItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MerriweatherSans-Bold';
+    src: url('fonts/MerriweatherSans-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MerriweatherSans-BoldItalic';
+    src: url('fonts/MerriweatherSans-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MerriweatherSans-ExtraBold';
+    src: url('fonts/MerriweatherSans-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MerriweatherSans-Regular';
+    src: url('fonts/MerriweatherSans-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Lato-Regular';
+    letter-spacing: 1.5px;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.navbar-brand .brand-img{
+	width: 40px;
+    height: auto;
+    margin: -10px 0;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+    font-size: 1vw;
+}
+
+p {
+    letter-spacing: 2px;
+}
+.text-primary {
+    color: #F3801E !important;
+}
+.btn {
+    letter-spacing: 3px;
+    font-size: 1.1vw;
+}
+.btn-flat {
+    border-radius: 2px !important;
+}
+
+.btn-blue {
+    background-color: #4F9CD9;
+    border-color: #4F9CD9;
+    color: #fff;
+    padding: 10px 25px;
+}
+.btn-blue:hover {
+    background-color: #54ABE0;
+    border-color: #2CA3DD;
+    color: #fff;
+}
+.btn-primary {
+    background-color: transparent !important;
+    border-color: #F3801E !important;
+    color: #F3801E !important;
+}
+
+.navbar .btn {
+    padding: 10px 14px !important;
+    margin: 3px !important;
+}
+
+/* section home styles
+-------------------------------------------------- */
+#home {
+    padding-top: 100px;
+    position: relative;
+    min-height: 100vh;
+}
+#home .sub-header {
+    color: #333333;
+    font-family: 'Lato-Bold';
+    font-size: 1.3vw;
+    margin-bottom: -10px;
+}
+#home p {
+    font-size: 1vw;
+}
+#home .text-content {
+    padding: 5% 0 0 8%;
+}
+#home .text-header {
+    color: #F5822A;
+    font-family: 'Lato-Heavy';
+    font-size: 3.5vw;
+}
+#home .line {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: -20%;
+    height: 340px;
+    width: 160%;
+    transform: rotate(150deg);
+    background: -webkit-linear-gradient(-90deg, #F58D2B, #FA6203); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #F58D2B, #FA6203); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #F58D2B, #FA6203); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #F58D2B, #FA6203); /* Standard syntax */
+}
+#home img {
+    padding-top: 50px;
+}
+
+/* section about styles
+-------------------------------------------------- */
+#about {
+    padding-top: 100px;
+    position: relative;
+    min-height: 100vh;
+}
+#about .text-content {
+    margin: 0 -10% 0 10%;
+    min-height: 42vh;
+}
+#about hr {
+    border: #F37C00 solid 2px;
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+}
+#about .text-content p {
+    font-size: 1.1vw;
+    max-width: 53vh;
+    padding: 10px;
+    color: #fff;
+    border-left: #fff solid 3px;
+}
+#about .logo p {
+    color: #777;
+    font-size: 1vw;
+    padding: 20px;
+}
+#about .logo img {
+    display: block;
+    margin: auto;
+    width: 55%;
+}
+#about .feature {
+    padding-top: 50px;
+}
+#about .feature img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 200px;
+}
+
+#about .feature p {
+    color: #777;
+    font-size: 0.9vw;
+}
+
+#about .feature p.text-primary {
+    font-size: 1.2vw;
+    font-family: 'MerriweatherSans-ExtraBold';
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* section products styles
+-------------------------------------------------- */
+#products {
+    min-height: 95vh;
+}
+
+#products .carousel-caption {
+    font-size: 1.1vw;
+    width: 40%;
+    left: 40% !important;
+    bottom: 25% !important;
+    color: #6C6D6F;
+    text-shadow: none;
+    text-align: left !important;
+}
+#products .carousel-caption p {
+    color: #F3801E;
+    font-size: 1.5vw;
+    font-family: 'MerriweatherSans-Bold';
+    width: 80px;
+    border-bottom: #F3801E solid 3px;
+}
+#products .carousel-caption span {
+    color: #49D2EC;
+    font-family: 'MerriweatherSans-ExtraBold';
+}
+#products .carousel-inner img {
+    position: absolute !important;
+    top: 25%;
+    left: 15% !important;
+}
+#products .carousel-inner img.landscape-img {
+    width: 250px;
+    top: 35%;
+}
+#products .carousel-inner .item {
+    position: relative;
+    min-height: 80vh;
+}
+
+#products .carousel-inner .carousel-caption a {
+    margin-top: 30px;
+}
+
+#products .carousel-indicators .active {
+    background-color: #F3822B;
+}
+#products .carousel-indicators li {
+    background-color: #777;
+}
+
+/* section partners styles
+-------------------------------------------------- */
+#partners {
+    background-color: #F7F8F9;
+    min-height: 80vh;
+    margin: -15px;
+}
+
+#partners .text-content {
+    margin: 10% -10% 0 10%;
+}
+
+#partners .text-content .text-header {
+    font-size: 2vw;
+    color: #F3801E;
+    font-family: 'MerriweatherSans-ExtraBold';
+}
+#partners .text-content hr {
+    border: #F37C00 solid 2px;
+    margin: 0;
+    width: 13%;
+    float: left;
+}
+
+#partners .text-content .text-description {
+    max-width: 75%;
+    font-size: 1vw;
+}
+
+#partners .comments {
+    margin-top: 10%;
+    padding: 0 5% 0 10%;
+}
+#partners .comments .quote {
+    font-size: 4vw;
+    color: #F6C4A9;
+    font-family: 'MerriweatherSans-ExtraBold';
+    position: absolute;
+    top: -155%;
+    left: -10%;
+}
+#partners .comments .text-header {
+    color: #717273;
+    font-size: 1.8vw;
+    position: relative;
+    font-family: 'Lato-Bold';
+}
+
+#partners .comments .text-description {
+    font-size: 1vw;
+}
+
+#partners .personal-information .info {
+    padding-top: 50px;
+}
+#partners .personal-information {
+    margin-top: 50px;
+}
+
+#partners .personal-information .name {
+    color: #7A7B7C;
+    font-size: 1vw;
+}
+#partners img {
+    display: block;
+    margin: auto;
+}
+
+#partners .personal-information .company {
+    color: #F3832E;
+    font-size: 1vw;
+}
+
+/* section contact-us styles
+-------------------------------------------------- */
+#contact-us {
+    position: relative;
+    min-height: 100vh;
+}
+
+#contact-us .text-content {
+    margin: 10% -10% 0 10%;
+}
+
+#contact-us .text-content .text-header {
+    font-size: 2vw;
+    color: #F3801E;
+    font-family: 'MerriweatherSans-ExtraBold';
+}
+#contact-us .text-content hr {
+    border: #F37C00 solid 2px;
+    margin: 0;
+    width: 13%;
+    float: left;
+}
+
+#contact-us .text-content .text-description {
+    max-width: 75%;
+    font-size: 1vw;
+}
+#contact-us .well {
+    background-color: #fff;
+    border: #EBC4A6 solid 1px;
+    margin: 0 80px;
+    border-radius: 0;
+}
+#contact-us .well form div.col-xs-12 {
+    padding: 10px 30px;
+}
+#contact-us .well form input, #contact-us .well form textarea {
+    background-color: #F7F8F9;
+    border-radius: 0;
+    font-size: 1vw;
+    padding: 20px 15px;
+}
+#contact-us .well form label {
+    font-size: 1vw;
+}
+
+#contact-us .form-container {
+    padding-top: 5%;
+    z-index: 1;
+}
+#contact-us .blue-gradient {
+    height: 240px;
+    width: 102%;
+    margin: 0 -30px;
+    background: -webkit-linear-gradient(-90deg, #54BEE1, #335CAB);
+    background: -o-linear-gradient(-90deg, #54BEE1, #335CAB);
+    background: -moz-linear-gradient(-90deg, #54BEE1, #335CAB);
+    background: linear-gradient(-90deg, #54BEE1, #335CAB);
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+
+.map.container-fluid {
+    margin: -10px;
+    position: relative;
+}
+.map.container-fluid .well {
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    top: 23%;
+}
+.map.container-fluid .well .text-header {
+    font-size: 2vw;
+    color: #F3801E;
+    font-family: 'MerriweatherSans-ExtraBold';
+}
+.map.container-fluid .well hr {
+    border: #F37C00 solid 2px;
+    margin: 0;
+    width: 15%;
+    float: left;
+}
+
+.map .text-description {
+    font-size: 1vw;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 360px;
+}
+.footer {
+    color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 370px;
+    background: -webkit-linear-gradient(-90deg, #FA6203, #F8A31B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #FA6203, #F8A31B); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #FA6203, #F8A31B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #FA6203, #F8A31B); /* Standard syntax */
+}
+.footer .text-content {
+    margin: 5% -10% 0 10%;
+}
+
+.footer .text-header {
+    font-size: 2vw;
+    color: #FFF;
+    font-family: 'MerriweatherSans-ExtraBold';
+}
+
+.footer .fa {
+    background: #fff;
+    border-radius: 150px;
+    font-size: 3em;
+    height: 60px;
+    width: 60px;
+    color: #f9770b;
+    padding: 10px 12px;
+}
+
+.footer a {
+    color: #fff !important;
+    font-size: 1.2vw;
+    padding-left: 50px;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #eee !important;
+}
+
+.footer p {
+    font-size: 0.9vw;
+}
+
+footer.footer ul li {
+    list-style: none;
+    margin: 20px 0px;
+}
+.footer .socials {
+    margin: 50px 0;
+}
+.footer .copyright {
+    margin: -3% 10%;
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1681px){
+    #home .line {
+        left: -30%;
+        height: 700px;
+    }
+    #about .text-content {
+        min-height: 29vh;
+    }
+    .container {
+        width: 2300px;
+    }
+    #products .carousel-inner img.landscape-img {
+        width: 550px;
+        top: 50%;
+    }
+    #products .carousel-inner img {
+        top: 45%;
+        width: 300px;
+        left: 20%;
+    }
+    #partners {
+        min-height: 50vh;
+    }
+    #contact-us .well {
+        margin: 0 180px;
+    }
+    #contact-us {
+        min-height: 60vh;
+    }
+    .footer .text-content {
+        margin: 2% -10% 0 10%;
+    }
+    .footer .copyright {
+        margin: -1.6% 10%;
+    }
+    #about .text-content p {
+        max-width: 43vh;
+    }
+}
+@media screen and (max-width: 1680px) and (min-width: 1550px){
+    #home .line {
+        left: -25%;
+    }
+    #about .text-content p {
+        max-width: 40vh;
+    }
+    #about .text-content {
+        min-height: 37vh;
+    }
+    #partners {
+        min-height: 65vh;
+    }
+    #contact-us {
+        min-height: 90vh;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1025px){
+    #home .line {
+        bottom: -15%;
+        left: -30%;
+        height: 400px;
+        transform: rotate(145deg);
+    }
+    #partners .comments .quote {
+        top: -90%;
+    }
+    #about .text-content {
+        min-height: 260px;
+    }
+    #partners .personal-information .name, #partners .personal-information .company {
+        font-size: 1.2vw;
+    }
+    #contact-us .well form div.col-xs-12 {
+        padding: 10px 20px;
+    }
+    #contact-us {
+        min-height: 110vh;
+    }
+    #products .carousel-inner img {
+        top: 35% !important;
+    }
+    #products .carousel-inner img.landscape-img {
+        top: 50%;
+    }
+    #partners {
+        min-height: 70vh;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 963px){
+    #home .line {
+        height: 260px;
+        width: 180%;
+        bottom: -5%;
+    }
+    #home {
+        min-height: 90vh;
+    }
+    #about .text-content {
+        min-height: 220px;
+    }
+    #about .feature img {
+        height: 150px;
+    }
+    #products .carousel-caption {
+        left: 50% !important;
+        bottom: 20% !important;
+    }
+    #products .carousel-inner img {
+        top: 15% !important;
+    }
+    #products .carousel-inner img.landscape-img {
+        top: 30% !important;
+    }
+    #partners .personal-information .info {
+        padding-top: 25px;
+    }
+    #partners {
+        min-height: 80vh;
+    }
+    #partners img {
+        height: 100px;
+        width: 100px;
+    }
+    #contact-us .well {
+         margin: 0;
+    }
+    #contact-us {
+        min-height: 150vh;
+    }
+    .footer a {
+        padding-left: 15px;
+    }
+    .footer .fa {
+        font-size: 2em;
+        height: 40px;
+        width: 40px;
+        padding: 6px 8px;
+    }
+}
+@media screen and (max-width: 962px) and (min-width: 400px){
+    #home .line {
+        height: 270px;
+        width: 200%;
+        left: -45%;
+        bottom: -9%;
+        transform: rotate(140deg);
+    }
+    #home .sub-header {
+         margin-bottom: 0px;
+    }
+    #home .text-header {
+        font-size: 3vw;
+    }
+    #home p {
+        font-size: 1.3vw;
+        max-width: 300px;
+    }
+    #about .text-content {
+        min-height: 240px;
+    }
+    #about .text-content p {
+        font-size: 1.2vw;
+        max-width: 50vh;
+    }
+    #about .logo p {
+        font-size: 1.2vw;
+    }
+    #about .feature p.text-primary {
+        font-size: 2.5vw;
+    }
+    #about .feature p {
+        font-size: 1.6vw;
+        padding: 0 60px;
+        text-align: center;
+    }
+    .text-content {
+        margin: 0 -10% 0 5%;
+    }
+    #products .carousel-inner img.landscape-img {
+        top: 38% !important;
+        width: 200px;
+        left: 10% !important;
+    }
+    #partners {
+        min-height: 110vh;
+    }
+    #partners .text-content .text-description,#partners .comments .text-description,
+    #partners .personal-information .name, #partners .personal-information .company,
+    #contact-us .text-content .text-description, .map .text-description, .footer p {
+        font-size: 1.2vw;
+    }
+}
