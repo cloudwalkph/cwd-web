@@ -51,7 +51,8 @@
         <div class="container-fluid section-parent">
             <!-- SHAPES -->
             <img src="/assets/images/shapes/rec1.png" alt="Rectangle" class="shape1">
-            <img src="/assets/images/shapes/rec2.png" alt="Rectangle2" class="shape2">
+            <img src="/assets/images/shapes/poly2.png" alt="Poly2" class="shape2">
+            <img src="/assets/images/shapes/poly1.png" alt="Poly1" class="shape3">
             <!-- HOME -->
             <div id="home">
                 <div class="line"></div>
@@ -264,11 +265,11 @@
 
             $(document).ready(function(){
                 $('.single-item').slick({
-                  dots: true,
-                  infinite: true,
-                  speed: 500,
-                  fade: true,
-                  cssEase: 'linear'
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    cssEase: 'linear'
                 });
                 $('a[href*="#"]:not([href="#"])').click(function() {
                     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
