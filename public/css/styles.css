@@ -80,6 +80,8 @@ body {
     font-family: 'Lato-Regular';
     letter-spacing: 1.5px;
     background-color: #fff;
+    overflow-x: hidden;
+    margin-bottom: 360px;
 }
 body div.section-parent {
     overflow-x: hidden;
@@ -130,12 +132,65 @@ p {
     margin: 3px !important;
 }
 
+.shape1 {
+    position: fixed;
+    left: 5%;
+    z-index: 0;
+    -webkit-animation:spin 12s linear infinite, floatBubble1 10s infinite  normal ease-out;
+    -moz-animation:spin 12s linear infinite, floatBubble1 10s infinite  normal ease-out;
+    animation:spin 12s linear infinite, floatBubble1 10s infinite  normal ease-out;
+    -webkit-animation-direction:alternate;
+}
+.shape2 {
+    position: fixed;
+    left: 45%;
+    z-index: 0;
+    -webkit-animation:reverseSpin 12s linear infinite, floatBubble2 10s infinite  normal ease-out;
+    -moz-animation:reverseSpin 12s linear infinite, floatBubble2 10s infinite  normal ease-out;
+    animation:reverseSpin 12s linear infinite, floatBubble2 10s infinite  normal ease-out;
+    -webkit-animation-direction:alternate;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes reverseSpin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes reverseSpin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes reverseSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@-webkit-keyframes floatBubble1{
+ from{
+    top:150px;
+    -webkit-animation-timing-function: ease-in;
+
+   }
+   to {
+      top: 250px;
+      -webkit-animation-timing-function: ease-out;
+   }
+
+}
+
+@-webkit-keyframes floatBubble2{
+ from{
+     top:250px;
+     -webkit-animation-timing-function: ease-in;
+
+    }
+    to {
+       top: 350px;
+       -webkit-animation-timing-function: ease-out;
+    }
+
+}
 /* section home styles
 -------------------------------------------------- */
 #home {
     padding-top: 100px;
     position: relative;
     min-height: 100vh;
+    z-index: 1;
 }
 #home .sub-header {
     color: #333333;
@@ -177,6 +232,7 @@ p {
     padding-top: 100px;
     position: relative;
     min-height: 100vh;
+    z-index: 1;
 }
 #about .text-content {
     margin: 0 -10% 0 10%;
@@ -231,43 +287,47 @@ p {
 -------------------------------------------------- */
 #products {
     min-height: 95vh;
+    z-index: 1;
 }
-
-#products .carousel-caption {
+#products .single-item {
+    position: relative;
+}
+#products .single-item .slick-caption {
+    position: absolute;
     font-size: 1.1vw;
     width: 40%;
     left: 40% ;
-    bottom: 25% ;
+    bottom: 40% ;
     color: #6C6D6F;
     text-shadow: none;
     text-align: left !important;
 }
-#products .carousel-caption p {
+#products .slick-caption p {
     color: #F3801E;
     font-size: 1.5vw;
     font-family: 'MerriweatherSans-Bold';
     width: 80px;
     border-bottom: #F3801E solid 3px;
 }
-#products .carousel-caption span {
+#products .slick-caption span {
     color: #49D2EC;
     font-family: 'MerriweatherSans-ExtraBold';
 }
-#products .carousel-inner img {
+#products .single-item img {
     position: absolute !important;
     top: 25%;
     left: 15% !important;
 }
-#products .carousel-inner img.landscape-img {
+#products .single-item img.landscape-img {
     width: 250px;
     top: 35%;
 }
-#products .carousel-inner .item {
+#products .single-item .item {
     position: relative;
     min-height: 80vh;
 }
 
-#products .carousel-inner .carousel-caption a {
+#products .single-item .slick-caption a {
     margin-top: 30px;
 }
 
@@ -284,6 +344,7 @@ p {
     background-color: #F7F8F9;
     min-height: 80vh;
     margin: -15px;
+    z-index: 0;
 }
 
 #partners .text-content {
@@ -356,6 +417,7 @@ p {
 #contact-us {
     position: relative;
     min-height: 100vh;
+    z-index: 0;
 }
 
 #contact-us .text-content {
@@ -415,6 +477,7 @@ p {
 }
 
 .map.container-fluid {
+    z-index: 1;
     margin: -10px;
     position: relative;
 }
@@ -448,10 +511,6 @@ p {
 html {
 	position: relative;
 	min-height: 100%;
-}
-body {
-	/* Margin bottom by footer height */
-	margin-bottom: 360px;
 }
 .footer {
     color: #fff;
@@ -521,11 +580,11 @@ footer.footer ul li {
     .container {
         width: 2300px;
     }
-    #products .carousel-inner img.landscape-img {
+    #products .single-item img.landscape-img {
         width: 550px;
-        top: 50%;
+        top: 42%;
     }
-    #products .carousel-inner img {
+    #products .single-item img {
         top: 45%;
         width: 300px;
         left: 20%;
@@ -589,11 +648,11 @@ footer.footer ul li {
     #contact-us {
         min-height: 110vh;
     }
-    #products .carousel-inner img {
-        top: 35% !important;
+    #products .single-item img {
+        top: 20% !important;
     }
-    #products .carousel-inner img.landscape-img {
-        top: 50%;
+    #products .single-item img.landscape-img {
+        top: 35%;
     }
     #partners {
         min-height: 70vh;
@@ -615,15 +674,15 @@ footer.footer ul li {
     #about .feature img {
         height: 150px;
     }
-    #products .carousel-caption {
+    #products .slick-caption {
         left: 50% !important;
         bottom: 20% !important;
     }
-    #products .carousel-inner img {
-        top: 15% !important;
+    #products .single-item img {
+        top: 45% !important;
     }
-    #products .carousel-inner img.landscape-img {
-        top: 30% !important;
+    #products .single-item img.landscape-img {
+        top: 57% !important;
     }
     #partners .personal-information .info {
         padding-top: 25px;
@@ -697,8 +756,8 @@ footer.footer ul li {
         margin: 0 -10% 0 5% !important;
         padding: 5% 0 0 0%;
     }
-    #products .carousel-inner img.landscape-img {
-        top: 38% !important;
+    #products .single-item img.landscape-img {
+        top: 34% !important;
         width: 200px;
         left: 10% !important;
     }
@@ -706,18 +765,19 @@ footer.footer ul li {
         min-height: 100vh;
         margin-top: 50px;
     }
-    #products .carousel-inner img {
+    #products .single-item img {
         width: 120px;
+        top: 23%;
     }
     #partners {
         min-height: 110vh;
     }
     #partners .text-content .text-description,#partners .comments .text-description,
     #partners .personal-information .name, #partners .personal-information .company,
-    #contact-us .text-content .text-description, .map .text-description, .footer p, #products .carousel-caption {
+    #contact-us .text-content .text-description, .map .text-description, .footer p, #products .slick-caption {
         font-size: 1.3vw;
     }
-    #products .carousel-caption p {
+    #products .slick-caption p {
         font-size: 2.5vw;
     }
     #contact-us .well form div.col-xs-12 {
@@ -797,24 +857,24 @@ footer.footer ul li {
     #about .feature p {
         font-size: 3vw;
     }
-    #products .carousel-inner img.landscape-img {
+    #products .single-item img.landscape-img {
         width: 200px;
         top: 30%;
         left: 20% !important;
     }
-    #products .carousel-caption p {
+    #products .slick-caption p {
         font-size: 4vw;
         width: 45px;
     }
-    #products .carousel-inner img {
+    #products .single-item img {
         top: 15%;
         left: 30% !important;
         width: 100px;
     }
-    #products .carousel-inner .carousel-caption a {
+    #products .single-item .slick-caption a {
         margin-top: 15px;
     }
-    #products .carousel-caption {
+    #products .single-item .slick-caption {
         font-size: 2vw;
         width: 100%;
         left: 0;

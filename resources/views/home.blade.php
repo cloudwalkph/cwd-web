@@ -8,7 +8,9 @@
         <title>CloudWalk Digital</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
+        <link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}" >
+        <link rel="stylesheet" href="{{ asset('css/slick/slick.css') }}" >
+        <link rel="stylesheet" href="{{ asset('css/slick/slick-theme.css') }}" >
         <link rel="stylesheet" href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" >
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
@@ -47,6 +49,9 @@
         </nav>
 
         <div class="container-fluid section-parent">
+            <!-- SHAPES -->
+            <img src="/assets/images/shapes/rec1.png" alt="Rectangle" class="shape1">
+            <img src="/assets/images/shapes/rec2.png" alt="Rectangle2" class="shape2">
             <!-- HOME -->
             <div id="home">
                 <div class="line"></div>
@@ -96,39 +101,31 @@
 
             <!-- PRODUCTS -->
             <div id="products" class="container-fluid">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
+                <div class="single-item">
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="/assets/images/photolive-logo.png" alt="Photolive">
-                            <div class="carousel-caption">
-                                <p>Products</p>
-                                <span>Photolive</span> is a social media tool and the first digital photo booth in the country that allows brands to gain valuable presence in top social networking sites like Facebook, Instagram, Twitter and email in real time. <br>
-                                <a href="http://photolive.com.ph/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
-                            </div>
+                    <div class="item">
+                        <img src="/assets/images/photolive-logo.png" alt="Photolive">
+                        <div class="slick-caption">
+                            <p>Products</p>
+                            <span>Photolive</span> is a social media tool and the first digital photo booth in the country that allows brands to gain valuable presence in top social networking sites like Facebook, Instagram, Twitter and email in real time. <br>
+                            <a href="http://photolive.com.ph/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
                         </div>
-                        <div class="item">
-                            <img src="/assets/images/bolooka-logo.png" alt="Bolooka" width="250" class="landscape-img">
-                            <div class="carousel-caption">
-                                <p>Products</p>
-                                <span>Bolooka</span> is an e-commerce platform that provides an exclusive marketplace for local merchants and artists who create only the best products in the country. <br>
-                                <a href="http://www.bolooka.com/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/bolooka-logo.png" alt="Bolooka" width="250" class="landscape-img">
+                        <div class="slick-caption">
+                            <p>Products</p>
+                            <span>Bolooka</span> is an e-commerce platform that provides an exclusive marketplace for local merchants and artists who create only the best products in the country. <br>
+                            <a href="http://www.bolooka.com/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
                         </div>
-                        <div class="item">
-                            <img src="/assets/images/medix-logo.png" alt="Medix" width="250" class="landscape-img">
-                            <div class="carousel-caption">
-                                <p>Products</p>
-                                <span>Medix</span> is a cloud-based clinic management software that helps healthcare practitioners improve their clinic operations using just one quick and easy service. It is a 24/7 accessible manager that efficiently organizes appointments and clinic records. <br>
-                                <a href="https://www.medix.ph/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/medix-logo.png" alt="Medix" width="250" class="landscape-img">
+                        <div class="slick-caption">
+                            <p>Products</p>
+                            <span>Medix</span> is a cloud-based clinic management software that helps healthcare practitioners improve their clinic operations using just one quick and easy service. It is a 24/7 accessible manager that efficiently organizes appointments and clinic records. <br>
+                            <a href="https://www.medix.ph/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
                         </div>
                     </div>
                 </div>
@@ -231,6 +228,12 @@
                 </div>
             </div>
         </footer>
+
+
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAueyHwdNHm7u2X68gb-4YuncJzRFDoyYI&callback=initMap"></script>
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('css/slick/slick.min.js') }}" ></script>
         <script>
             var marker;
             function initMap() {
@@ -259,8 +262,29 @@
                 }
             }
 
-            </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAueyHwdNHm7u2X68gb-4YuncJzRFDoyYI&callback=initMap"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
+            $(document).ready(function(){
+                $('.single-item').slick({
+                  dots: true,
+                  infinite: true,
+                  speed: 500,
+                  fade: true,
+                  cssEase: 'linear'
+                });
+                $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top-20
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+
+            })
+
+        </script>
     </body>
 </html>
