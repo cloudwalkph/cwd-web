@@ -22,6 +22,35 @@
            }
         </style>
 
+        <script type="text/javascript">
+            var marker;
+            function initMap() {
+                var cloudwalk = {lat: 14.629339911026799, lng: 121.04066580533981};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 20,
+                  center: cloudwalk
+                });
+
+                var image = '/assets/images/pin.png';
+                marker = new google.maps.Marker({
+                  position: cloudwalk,
+                  animation: google.maps.Animation.DROP,
+                  map: map,
+                  icon: image
+                });
+
+                marker.addListener('click', toggleBounce);
+            }
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                  marker.setAnimation(null);
+                } else {
+                  marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+        </script>
+
     </head>
     <body>
         <nav class="navbar navbar-default" id="nav_bar">
@@ -236,33 +265,6 @@
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('css/slick/slick.min.js') }}" ></script>
         <script>
-            var marker;
-            function initMap() {
-                var cloudwalk = {lat: 14.629339911026799, lng: 121.04066580533981};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 20,
-                  center: cloudwalk
-                });
-
-                var image = '/assets/images/pin.png';
-                marker = new google.maps.Marker({
-                  position: cloudwalk,
-                  animation: google.maps.Animation.DROP,
-                  map: map,
-                  icon: image
-                });
-
-                marker.addListener('click', toggleBounce);
-            }
-
-            function toggleBounce() {
-                if (marker.getAnimation() !== null) {
-                  marker.setAnimation(null);
-                } else {
-                  marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
-            }
-
             $(document).ready(function(){
                 $('.single-item').slick({
                     dots: true,
