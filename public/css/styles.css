@@ -96,6 +96,14 @@ body div.section-parent {
     font-size: 1vw;
 }
 
+.navbar-nav>li {
+    margin: 0 5px;
+}
+
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
+    color: #F3801E !important;
+}
+
 p {
     letter-spacing: 2px;
 }
@@ -108,6 +116,11 @@ p {
 }
 .btn-flat {
     border-radius: 2px !important;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form, .navbar-default {
+    background-color: #fff;
+    border: #fff;
 }
 
 .btn-blue {

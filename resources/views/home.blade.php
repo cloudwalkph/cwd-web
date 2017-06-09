@@ -24,7 +24,7 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default" id="nav_bar">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -281,6 +281,19 @@
                             }, 1000);
                             return false;
                         }
+                    }
+                });
+
+                $(window).scroll(function () {
+
+                    console.log($(window).scrollTop());
+
+                    if ($(window).scrollTop() > 26) {
+                        $('#nav_bar').addClass('navbar-fixed-top');
+                    }
+
+                    if ($(window).scrollTop() < 27) {
+                        $('#nav_bar').removeClass('navbar-fixed-top');
                     }
                 });
 
