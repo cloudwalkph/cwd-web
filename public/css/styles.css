@@ -863,7 +863,7 @@ footer.footer ul li {
         left: 20% !important;
     }
     #products .slick-caption p {
-        font-size: 4vw;
+        font-size: 5vw;
         width: 45px;
     }
     #products .single-item img {
@@ -875,7 +875,7 @@ footer.footer ul li {
         margin-top: 15px;
     }
     #products .single-item .slick-caption {
-        font-size: 2vw;
+        font-size: 3vw;
         width: 100%;
         left: 0;
         bottom: 20% !important;
