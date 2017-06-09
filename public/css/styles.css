@@ -79,8 +79,10 @@
 body {
     font-family: 'Lato-Regular';
     letter-spacing: 1.5px;
-    overflow-x: hidden;
     background-color: #fff;
+}
+body div.section-parent {
+    overflow-x: hidden;
 }
 
 .navbar-brand .brand-img{
@@ -234,8 +236,8 @@ p {
 #products .carousel-caption {
     font-size: 1.1vw;
     width: 40%;
-    left: 40% !important;
-    bottom: 25% !important;
+    left: 40% ;
+    bottom: 25% ;
     color: #6C6D6F;
     text-shadow: none;
     text-align: left !important;
@@ -685,20 +687,257 @@ footer.footer ul li {
         padding: 0 60px;
         text-align: center;
     }
-    .text-content {
-        margin: 0 -10% 0 5%;
+    #home .text-content, #products .text-content, #contact-us .text-content,
+    #partners .text-content, .map.container-fluid .text-content, .footer .text-content {
+        margin: 5% -5% 0 5% !important;
+        padding: 5% 0 0 0%;
+    }
+
+    #about .text-content {
+        margin: 0 -10% 0 5% !important;
+        padding: 5% 0 0 0%;
     }
     #products .carousel-inner img.landscape-img {
         top: 38% !important;
         width: 200px;
         left: 10% !important;
     }
+    #products {
+        min-height: 100vh;
+        margin-top: 50px;
+    }
+    #products .carousel-inner img {
+        width: 120px;
+    }
     #partners {
         min-height: 110vh;
     }
     #partners .text-content .text-description,#partners .comments .text-description,
     #partners .personal-information .name, #partners .personal-information .company,
-    #contact-us .text-content .text-description, .map .text-description, .footer p {
-        font-size: 1.2vw;
+    #contact-us .text-content .text-description, .map .text-description, .footer p, #products .carousel-caption {
+        font-size: 1.3vw;
+    }
+    #products .carousel-caption p {
+        font-size: 2.5vw;
+    }
+    #contact-us .well form div.col-xs-12 {
+        padding: 5px 10px;
+    }
+    #contact-us .well form input, #contact-us .well form textarea {
+        padding: 15px 12px;
+    }
+    #contact-us .well {
+        margin: 0 15px;
+    }
+    .footer a {
+        font-size: 1.8vw;
+        padding-left: 20px;
+    }
+    .footer .copyright {
+        margin: -5% 3%;
+    }
+    #partners .comments .quote {
+        font-size: 6vw;
+    }
+
+}
+
+@media screen and (max-width: 399px){
+    .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+        font-size: 3.6vw;
+    }
+    #home {
+        min-height: 90vh;
+    }
+    #home .sub-header {
+        font-size: 3.5vw;
+        margin-bottom: 0;
+    }
+    #home .text-header {
+        font-size: 6vw;
+    }
+    #home p {
+        font-size: 3vw;
+    }
+    .btn {
+        letter-spacing: 3px;
+        font-size: 3vw;
+    }
+    #home .line {
+        display: none;
+    }
+    #about .text-content {
+        margin: 0;
+        min-height: 0;
+    }
+    #about .text-content p {
+        font-size: 3vw;
+        padding: 0;
+        color: #555;
+        border-left: none;
+    }
+    #about hr {
+        border: #F37C00 solid 1px;
+         position: relative;
+         width: 100%;
+    }
+    #about .logo img {
+        width: 65%;
+    }
+    #about .logo p {
+        font-size: 3vw;
+        padding: 20px 0;
+    }
+    #about .feature img {
+        height: 130px;
+    }
+    #about .feature p.text-primary {
+        font-size: 3.2vw;
+    }
+    #about .feature p {
+        font-size: 3vw;
+    }
+    #products .carousel-inner img.landscape-img {
+        width: 200px;
+        top: 30%;
+        left: 20% !important;
+    }
+    #products .carousel-caption p {
+        font-size: 4vw;
+        width: 45px;
+    }
+    #products .carousel-inner img {
+        top: 15%;
+        left: 30% !important;
+        width: 100px;
+    }
+    #products .carousel-inner .carousel-caption a {
+        margin-top: 15px;
+    }
+    #products .carousel-caption {
+        font-size: 2vw;
+        width: 100%;
+        left: 0;
+        bottom: 20% !important;
+        color: #6C6D6F;
+        text-shadow: none;
+        text-align: left !important;
+    }
+    #partners .text-content .text-header {
+        font-size: 4vw;
+    }
+    #partners .text-content .text-description {
+        max-width: 85%;
+        font-size: 3vw;
+    }
+    #partners .text-content .text-header {
+        font-size: 4vw;
+    }
+    #partners .text-content .text-description {
+        max-width: 85%;
+        font-size: 3vw;
+    }
+    #partners .comments .text-header {
+        font-size: 3vw;
+    }
+    #partners .comments .quote {
+        font-size: 10vw;
+    }
+    #partners .comments .text-description {
+        font-size: 3vw;
+    }
+    #partners .personal-information {
+        margin-top: 30px;
+    }
+    #partners img.img-circle {
+        width: 80px;
+        height: 80px;
+    }
+    #partners .personal-information .info {
+        padding-top: 25px;
+    }
+    #partners .personal-information .name, #partners .personal-information .company {
+        font-size: 3vw;
+    }
+    #contact-us .text-content {
+        margin: 10% 0 0 0%;
+    }
+    #contact-us .text-content .text-header {
+        font-size: 4vw;
+    }
+    #contact-us .text-content .text-description {
+        max-width: 95%;
+        font-size: 3vw;
+    }
+    #contact-us .well form input, #contact-us .well form textarea {
+        font-size: 3vw;
+        padding: 14px 10px;
+    }
+    #contact-us .well form label {
+        font-size: 3vw;
+    }
+    #contact-us .form-container {
+        padding-top: 5%;
+        z-index: 1;
+        margin: 0 -30px;
+        width: 120%;
+    }
+    #contact-us .well {
+        margin: 0;
+        padding: 0;
+    }
+    #contact-us .well form div.col-xs-12 {
+        padding: 5px 25px;
+    }
+    #contact-us .blue-gradient {
+        height: 240px;
+        width: 110%;
+    }
+    #contact-us {
+        position: relative;
+        min-height: 800px;
+    }
+    .map .text-description {
+        font-size: 3vw;
+    }
+    .map.container-fluid .well .text-header {
+        font-size: 5vw;
+    }
+    .map.container-fluid .well {
+        bottom: 0;
+        top: inherit;
+    }
+    #map {
+        height: 400px;
+        width: 105%;
+        margin-left: -2%;
+    }
+    .map.container-fluid {
+        margin: 0 -23px;
+    }
+    .footer .text-content {
+        margin: 5% 0% 0 0%;
+    }
+    .footer .copyright {
+        margin: 0;
+    }
+    .footer .fa {
+        font-size: 1.2em;
+        height: 30px;
+        width: 30px;
+        padding: 7px 8px;
+    }
+    .footer .socials {
+        margin: 0;
+    }
+    .footer .text-header {
+        font-size: 6vw;
+    }
+    .footer p {
+        font-size: 3.4vw;
+    }
+    .footer a {
+        font-size: 3.2vw;
+        padding-left: 10px;
     }
 }

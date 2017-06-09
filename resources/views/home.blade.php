@@ -146,10 +146,10 @@
                     <p class="text-header"><span class="quote">“</span>The best Digital Agency since sliced bread!</p>
                     <p class="text-description">How’s business? Boomin. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. Surround yourself with angels.</p>
                     <div class="personal-information">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="col-md-4 col-sm-6 col-xs-4">
                             <img src="/assets/images/pom.jpg" alt="Medix" class="img-circle" width="150" height="150">
                         </div>
-                        <div class="col-md-8 col-sm-6 col-xs-12 info">
+                        <div class="col-md-8 col-sm-6 col-xs-8 info">
                             <span class="name">Jonathan L. Simmons</span> <br>
                             <span class="company">Blade and Babe Inc.</span>
                         </div>
