@@ -93,11 +93,11 @@ body div.section-parent {
     margin: -10px 0;
 }
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
-    font-size: 1vw;
+    font-size: 17px;
 }
 
 .navbar-nav>li {
-    margin: 0 5px;
+    margin: 10px;
 }
 
 .navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
@@ -115,7 +115,7 @@ p {
 }
 .btn {
     letter-spacing: 3px;
-    font-size: 1.1vw;
+    font-size: 15px;
 }
 .btn-flat {
     border-radius: 2px !important;
@@ -225,17 +225,18 @@ p {
 #home {
     padding-top: 100px;
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 700px;
     z-index: 1;
 }
 #home .sub-header {
     color: #333333;
     font-family: 'Lato-Bold';
-    font-size: 1.3vw;
+    font-size: 20px;
     margin-bottom: -10px;
 }
 #home p {
-    font-size: 1vw;
+    font-size: 17px;
 }
 #home .text-content {
     padding: 5% 0 0 8%;
@@ -243,7 +244,7 @@ p {
 #home .text-header {
     color: #F5822A;
     font-family: 'Lato-Heavy';
-    font-size: 3.5vw;
+    font-size: 3em;
 }
 #home .line {
     position: absolute;
@@ -264,56 +265,51 @@ p {
 
 /* section about styles
 -------------------------------------------------- */
-#about {
+#aboutus {
     padding-top: 100px;
     position: relative;
-    min-height: 100vh;
+    height: auto;
+    min-height: 920px;
     z-index: 1;
 }
-#about .text-content {
-    margin: 0 -10% 0 10%;
-    min-height: 42vh;
-}
-#about hr {
+#aboutus hr {
     border: #F37C00 solid 2px;
-    position: absolute;
-    width: 80%;
-    bottom: 0;
+    margin-left: 0;
 }
-#about .text-content p {
-    font-size: 1.1vw;
+#aboutus .text-content p {
+    font-size: 15px;
     max-width: 53vh;
     padding: 10px;
     color: #fff;
     border-left: #fff solid 3px;
 }
-#about .logo p {
+#aboutus .logo p {
     color: #777;
-    font-size: 1vw;
+    font-size: 17px;
     padding: 20px;
 }
-#about .logo img {
+#aboutus .logo img {
     display: block;
     margin: auto;
     width: 55%;
 }
-#about .feature {
+#aboutus .feature {
     padding-top: 50px;
 }
-#about .feature img {
+#aboutus .feature img {
     display: block;
     margin: auto;
     width: auto;
     height: 200px;
 }
 
-#about .feature p {
+#aboutus .feature p {
     color: #777;
-    font-size: 0.9vw;
+    font-size: 14px;
 }
 
-#about .feature p.text-primary {
-    font-size: 1.2vw;
+#aboutus .feature p.text-primary {
+    font-size: 15px;
     font-family: 'MerriweatherSans-ExtraBold';
     text-align: center;
     padding-top: 15px;
@@ -322,25 +318,31 @@ p {
 /* section products styles
 -------------------------------------------------- */
 #products {
-    min-height: 95vh;
+    height: auto;
     z-index: 1;
+    min-height: 400px;
+    margin: 100px;
 }
 #products .single-item {
+    height: 90%;
     position: relative;
 }
+#products .text-header {
+    color: #F5822A;
+    font-family: 'Lato-Heavy';
+    font-size: 3em;
+}
 #products .single-item .slick-caption {
-    position: absolute;
-    font-size: 1.1vw;
+    font-size: 15px;
     width: 40%;
-    left: 40% ;
-    bottom: 40% ;
+    margin-left: 65px;
     color: #6C6D6F;
     text-shadow: none;
-    text-align: left !important;
+    text-align: left ;
 }
 #products .slick-caption p {
     color: #F3801E;
-    font-size: 1.5vw;
+    font-size: 18px;
     font-family: 'MerriweatherSans-Bold';
     width: 80px;
     border-bottom: #F3801E solid 3px;
@@ -349,18 +351,13 @@ p {
     color: #49D2EC;
     font-family: 'MerriweatherSans-ExtraBold';
 }
-#products .single-item img {
-    position: absolute !important;
-    top: 25%;
-    left: 15% !important;
-}
-#products .single-item img.landscape-img {
-    width: 250px;
-    top: 35%;
-}
+
 #products .single-item .item {
     position: relative;
-    min-height: 80vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #products .single-item .slick-caption a {
@@ -378,7 +375,8 @@ p {
 -------------------------------------------------- */
 #partners {
     background-color: #F7F8F9;
-    min-height: 80vh;
+    height: 80vh;
+    min-height: 600px;
     margin: -15px;
     z-index: 0;
 }
@@ -388,7 +386,7 @@ p {
 }
 
 #partners .text-content .text-header {
-    font-size: 2vw;
+    font-size: 20px;
     color: #F3801E;
     font-family: 'MerriweatherSans-ExtraBold';
 }
@@ -401,7 +399,7 @@ p {
 
 #partners .text-content .text-description {
     max-width: 75%;
-    font-size: 1vw;
+    font-size: 17px;
 }
 
 #partners .comments {
@@ -409,7 +407,7 @@ p {
     padding: 0 5% 0 10%;
 }
 #partners .comments .quote {
-    font-size: 4vw;
+    font-size: 3em;
     color: #F6C4A9;
     font-family: 'MerriweatherSans-ExtraBold';
     position: absolute;
@@ -418,13 +416,13 @@ p {
 }
 #partners .comments .text-header {
     color: #717273;
-    font-size: 1.8vw;
+    font-size: 16px;
     position: relative;
     font-family: 'Lato-Bold';
 }
 
 #partners .comments .text-description {
-    font-size: 1vw;
+    font-size: 17px;
 }
 
 #partners .personal-information .info {
@@ -436,7 +434,7 @@ p {
 
 #partners .personal-information .name {
     color: #7A7B7C;
-    font-size: 1vw;
+    font-size: 17px;
 }
 #partners img {
     display: block;
@@ -445,14 +443,15 @@ p {
 
 #partners .personal-information .company {
     color: #F3832E;
-    font-size: 1vw;
+    font-size: 17px;
 }
 
 /* section contact-us styles
 -------------------------------------------------- */
 #contact-us {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 800px;
     z-index: 0;
 }
 
@@ -461,7 +460,7 @@ p {
 }
 
 #contact-us .text-content .text-header {
-    font-size: 2vw;
+    font-size: 20px;
     color: #F3801E;
     font-family: 'MerriweatherSans-ExtraBold';
 }
@@ -474,7 +473,7 @@ p {
 
 #contact-us .text-content .text-description {
     max-width: 75%;
-    font-size: 1vw;
+    font-size: 17px;
 }
 #contact-us .well {
     background-color: #fff;
@@ -488,11 +487,11 @@ p {
 #contact-us .well form input, #contact-us .well form textarea {
     background-color: #F7F8F9;
     border-radius: 0;
-    font-size: 1vw;
+    font-size: 17px;
     padding: 20px 15px;
 }
 #contact-us .well form label {
-    font-size: 1vw;
+    font-size: 17px;
 }
 
 #contact-us .form-container {
@@ -527,7 +526,7 @@ p {
     top: 23%;
 }
 .map.container-fluid .well .text-header {
-    font-size: 2vw;
+    font-size: 20px;
     color: #F3801E;
     font-family: 'MerriweatherSans-ExtraBold';
 }
@@ -539,7 +538,7 @@ p {
 }
 
 .map .text-description {
-    font-size: 1vw;
+    font-size: 17px;
 }
 
 /* Sticky footer styles
@@ -565,7 +564,7 @@ html {
 }
 
 .footer .text-header {
-    font-size: 2vw;
+    font-size: 20px;
     color: #FFF;
     font-family: 'MerriweatherSans-ExtraBold';
 }
@@ -582,7 +581,7 @@ html {
 
 .footer a {
     color: #fff !important;
-    font-size: 1.2vw;
+    font-size: 18px;
     padding-left: 50px;
     text-decoration: none;
 }
@@ -591,7 +590,7 @@ html {
 }
 
 .footer p {
-    font-size: 0.9vw;
+    font-size: 14px;
 }
 
 footer.footer ul li {
@@ -610,9 +609,6 @@ footer.footer ul li {
         left: -30%;
         height: 700px;
     }
-    #about .text-content {
-        min-height: 29vh;
-    }
     .container {
         width: 2300px;
     }
@@ -626,13 +622,13 @@ footer.footer ul li {
         left: 20%;
     }
     #partners {
-        min-height: 50vh;
+        height: 50vh;
     }
     #contact-us .well {
         margin: 0 180px;
     }
     #contact-us {
-        min-height: 60vh;
+        height: 60vh;
     }
     .footer .text-content {
         margin: 2% -10% 0 10%;
@@ -640,7 +636,7 @@ footer.footer ul li {
     .footer .copyright {
         margin: -1.6% 10%;
     }
-    #about .text-content p {
+    #aboutus .text-content p {
         max-width: 43vh;
     }
 }
@@ -648,17 +644,14 @@ footer.footer ul li {
     #home .line {
         left: -25%;
     }
-    #about .text-content p {
+    #aboutus .text-content p {
         max-width: 40vh;
     }
-    #about .text-content {
-        min-height: 37vh;
-    }
     #partners {
-        min-height: 65vh;
+        height: 65vh;
     }
     #contact-us {
-        min-height: 90vh;
+        height: 90vh;
     }
 }
 
@@ -672,17 +665,14 @@ footer.footer ul li {
     #partners .comments .quote {
         top: -90%;
     }
-    #about .text-content {
-        min-height: 260px;
-    }
     #partners .personal-information .name, #partners .personal-information .company {
-        font-size: 1.2vw;
+        font-size: 15px;
     }
     #contact-us .well form div.col-xs-12 {
         padding: 10px 20px;
     }
     #contact-us {
-        min-height: 110vh;
+        height: 110vh;
     }
     #products .single-item img {
         top: 20% !important;
@@ -691,7 +681,7 @@ footer.footer ul li {
         top: 35%;
     }
     #partners {
-        min-height: 70vh;
+        height: 70vh;
     }
 }
 
@@ -704,10 +694,7 @@ footer.footer ul li {
     #home {
         min-height: 90vh;
     }
-    #about .text-content {
-        min-height: 220px;
-    }
-    #about .feature img {
+    #aboutus .feature img {
         height: 150px;
     }
     #products .slick-caption {
@@ -724,7 +711,7 @@ footer.footer ul li {
         padding-top: 25px;
     }
     #partners {
-        min-height: 80vh;
+        height: 80vh;
     }
     #partners img {
         height: 100px;
@@ -734,7 +721,7 @@ footer.footer ul li {
          margin: 0;
     }
     #contact-us {
-        min-height: 150vh;
+        height: 150vh;
     }
     .footer a {
         padding-left: 15px;
@@ -745,6 +732,15 @@ footer.footer ul li {
         width: 40px;
         padding: 6px 8px;
     }
+    #contact-us .well {
+        margin: 0 30px;
+    }
+}
+@media screen and (max-width: 962px) and (min-width: 768px) {
+    #contact-us {
+        min-height: 600px !important;
+        height: 600px;
+    }
 }
 @media screen and (max-width: 962px) and (min-width: 400px){
     #home .line {
@@ -752,69 +748,56 @@ footer.footer ul li {
         width: 200%;
         left: -45%;
         bottom: -9%;
-        transform: rotate(140deg);
+        transform: rotate(150deg);
     }
-    #home .sub-header {
-         margin-bottom: 0px;
+    #aboutus .logo p {
+        font-size: 15px;
     }
-    #home .text-header {
-        font-size: 3vw;
+    #aboutus .text-content p {
+        color: #333;
+        max-width: 100%; 
     }
-    #home p {
-        font-size: 1.3vw;
-        max-width: 300px;
+    #aboutus .feature p.text-primary {
+        font-size: 17px;
     }
-    #about .text-content {
-        min-height: 240px;
-    }
-    #about .text-content p {
-        font-size: 1.2vw;
-        max-width: 50vh;
-    }
-    #about .logo p {
-        font-size: 1.2vw;
-    }
-    #about .feature p.text-primary {
-        font-size: 2.5vw;
-    }
-    #about .feature p {
-        font-size: 1.6vw;
-        padding: 0 60px;
+    #aboutus .feature p {
+        font-size: 14px;
+        padding: 10px 0;
         text-align: center;
     }
     #home .text-content, #products .text-content, #contact-us .text-content,
-    #partners .text-content, .map.container-fluid .text-content, .footer .text-content {
-        margin: 5% -5% 0 5% !important;
-        padding: 5% 0 0 0%;
-    }
-
-    #about .text-content {
-        margin: 0 -10% 0 5% !important;
-        padding: 5% 0 0 0%;
-    }
-    #products .single-item img.landscape-img {
-        top: 34% !important;
-        width: 200px;
-        left: 10% !important;
+    .map.container-fluid .text-content {
+        margin: 10px 0 !important;
+        padding: 10px 0px;
     }
     #products {
-        min-height: 100vh;
-        margin-top: 50px;
+        margin: 50px 20px;
     }
-    #products .single-item img {
-        width: 120px;
-        top: 23%;
+    #products .single-item .slick-caption {
+        width: 100%;
+        margin-left: 0px; 
+    }
+    #products .single-item .item {
+        display: block;
     }
     #partners {
-        min-height: 110vh;
+        height: 750px;
     }
-    #partners .text-content .text-description,#partners .comments .text-description,
-    #partners .personal-information .name, #partners .personal-information .company,
-    #contact-us .text-content .text-description, .map .text-description, .footer p, #products .slick-caption {
-        font-size: 1.3vw;
+    #partners .personal-information .info {
+        text-align: center;
+    }
+    #contact-us .form-container {
+        padding: 0;
     }
     #products .slick-caption p {
-        font-size: 2.5vw;
+        font-size: 17px;
+    }
+    #products .slick-slide img {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    #contact-us {
+        min-height: 900px;
     }
     #contact-us .well form div.col-xs-12 {
         padding: 5px 10px;
@@ -823,217 +806,40 @@ footer.footer ul li {
         padding: 15px 12px;
     }
     #contact-us .well {
-        margin: 0 15px;
+        margin: 0;
+    }
+    #contact-us .blue-gradient {
+        height: 190px;
+        width: 110%;
     }
     .footer a {
-        font-size: 1.8vw;
+        font-size: 16px;
         padding-left: 20px;
     }
     .footer .copyright {
         margin: -5% 3%;
     }
     #partners .comments .quote {
-        font-size: 6vw;
+        font-size: 4em;
     }
-
-}
-
-@media screen and (max-width: 399px){
-    .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
-        font-size: 3.6vw;
+    body {
+        margin-bottom: 450px;
     }
-    #home {
-        min-height: 90vh;
+    .footer {
+        height: 450px;
     }
-    #home .sub-header {
-        font-size: 3.5vw;
-        margin-bottom: 0;
-    }
-    #home .text-header {
-        font-size: 6vw;
-    }
-    #home p {
-        font-size: 3vw;
-    }
-    .btn {
-        letter-spacing: 3px;
-        font-size: 3vw;
-    }
-    #home .line {
-        display: none;
-    }
-    #about .text-content {
-        margin: 0;
-        min-height: 0;
-    }
-    #about .text-content p {
-        font-size: 3vw;
-        padding: 0;
-        color: #555;
-        border-left: none;
-    }
-    #about hr {
-        border: #F37C00 solid 1px;
-         position: relative;
-         width: 100%;
-    }
-    #about .logo img {
-        width: 65%;
-    }
-    #about .logo p {
-        font-size: 3vw;
-        padding: 20px 0;
-    }
-    #about .feature img {
-        height: 130px;
-    }
-    #about .feature p.text-primary {
-        font-size: 3.2vw;
-    }
-    #about .feature p {
-        font-size: 3vw;
-    }
-    #products .single-item img.landscape-img {
-        width: 200px;
-        top: 30%;
-        left: 20% !important;
-    }
-    #products .slick-caption p {
-        font-size: 5vw;
-        width: 45px;
-    }
-    #products .single-item img {
-        top: 15%;
-        left: 30% !important;
-        width: 100px;
-    }
-    #products .single-item .slick-caption a {
-        margin-top: 15px;
-    }
-    #products .single-item .slick-caption {
-        font-size: 3vw;
-        width: 100%;
-        left: 0;
-        bottom: 20% !important;
-        color: #6C6D6F;
-        text-shadow: none;
-        text-align: left !important;
-    }
-    #partners .text-content .text-header {
-        font-size: 4vw;
-    }
-    #partners .text-content .text-description {
-        max-width: 85%;
-        font-size: 3vw;
-    }
-    #partners .text-content .text-header {
-        font-size: 4vw;
-    }
-    #partners .text-content .text-description {
-        max-width: 85%;
-        font-size: 3vw;
-    }
-    #partners .comments .text-header {
-        font-size: 3vw;
-    }
-    #partners .comments .quote {
-        font-size: 10vw;
-    }
-    #partners .comments .text-description {
-        font-size: 3vw;
-    }
-    #partners .personal-information {
-        margin-top: 30px;
-    }
-    #partners img.img-circle {
-        width: 80px;
-        height: 80px;
-    }
-    #partners .personal-information .info {
-        padding-top: 25px;
-    }
-    #partners .personal-information .name, #partners .personal-information .company {
-        font-size: 3vw;
-    }
-    #contact-us .text-content {
-        margin: 10% 0 0 0%;
-    }
-    #contact-us .text-content .text-header {
-        font-size: 4vw;
-    }
-    #contact-us .text-content .text-description {
-        max-width: 95%;
-        font-size: 3vw;
-    }
-    #contact-us .well form input, #contact-us .well form textarea {
-        font-size: 3vw;
-        padding: 14px 10px;
-    }
-    #contact-us .well form label {
-        font-size: 3vw;
-    }
-    #contact-us .form-container {
-        padding-top: 5%;
-        z-index: 1;
-        margin: 0 -30px;
-        width: 120%;
-    }
-    #contact-us .well {
-        margin: 0;
-        padding: 0;
-    }
-    #contact-us .well form div.col-xs-12 {
-        padding: 5px 25px;
-    }
-    #contact-us .blue-gradient {
-        height: 240px;
-        width: 110%;
-    }
-    #contact-us {
-        position: relative;
-        min-height: 800px;
-    }
-    .map .text-description {
-        font-size: 3vw;
-    }
-    .map.container-fluid .well .text-header {
-        font-size: 5vw;
-    }
-    .map.container-fluid .well {
-        bottom: 0;
-        top: inherit;
-    }
-    #map {
-        height: 400px;
-        width: 105%;
-        margin-left: -2%;
-    }
-    .map.container-fluid {
-        margin: 0 -23px;
-    }
-    .footer .text-content {
-        margin: 5% 0% 0 0%;
-    }
-    .footer .copyright {
-        margin: 0;
-    }
-    .footer .fa {
-        font-size: 1.2em;
-        height: 30px;
-        width: 30px;
-        padding: 7px 8px;
+    .footer .socials ul {
+        padding-left: 0;
     }
     .footer .socials {
-        margin: 0;
+        margin: 20px 0;
     }
-    .footer .text-header {
-        font-size: 6vw;
+    .footer .fa {
+        font-size: 2em;
+        height: 45px;
+        width: 45px;
     }
-    .footer p {
-        font-size: 3.4vw;
-    }
-    .footer a {
-        font-size: 3.2vw;
-        padding-left: 10px;
+    .footer .text-content {
+        margin: 5% 0 0 5%;
     }
 }
