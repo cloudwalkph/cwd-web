@@ -245,13 +245,13 @@
 
         <footer class="footer">
             <div class="container-fluid">
-                <div class="col-md-8 col-sm-6 col-xs-12 text-content">
+                <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12 text-content">
                     <p class="text-header">DROP BY OUR OFFICE!</p>
                     <p>whatsup@cloudwalkdigital.com</p>
                     <p>(02)-962-4192</p>
                     <button type="button" class="btn btn-blue btn-flat">START YOUR PROJECT</button>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 socials">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 socials">
                     <ul>
                         <li><i class="fa fa-facebook-square"></i> <a href="#">TERMS AND CONDITIONS</a></li>
                         <li><i class="fa fa-twitter"></i> <a href="#">BLOG</a></li>

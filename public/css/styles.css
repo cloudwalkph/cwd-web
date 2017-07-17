@@ -407,7 +407,7 @@ p {
     padding: 0 5% 0 10%;
 }
 #partners .comments .quote {
-    font-size: 3em;
+    font-size: 4em;
     color: #F6C4A9;
     font-family: 'MerriweatherSans-ExtraBold';
     position: absolute;
@@ -500,7 +500,7 @@ p {
 }
 #contact-us .blue-gradient {
     height: 240px;
-    width: 102%;
+    width: 110%;
     margin: 0 -30px;
     background: -webkit-linear-gradient(-90deg, #54BEE1, #335CAB);
     background: -o-linear-gradient(-90deg, #54BEE1, #335CAB);
@@ -591,6 +591,9 @@ html {
 
 .footer p {
     font-size: 14px;
+}
+.footer .socials ul {
+    padding-left: 0;
 }
 
 footer.footer ul li {
@@ -723,6 +726,9 @@ footer.footer ul li {
     #contact-us {
         height: 150vh;
     }
+    .footer {
+        height: 385px;
+    }
     .footer a {
         padding-left: 15px;
     }
@@ -810,7 +816,6 @@ footer.footer ul li {
     }
     #contact-us .blue-gradient {
         height: 190px;
-        width: 110%;
     }
     .footer a {
         font-size: 16px;
@@ -819,17 +824,11 @@ footer.footer ul li {
     .footer .copyright {
         margin: -5% 3%;
     }
-    #partners .comments .quote {
-        font-size: 4em;
-    }
     body {
         margin-bottom: 450px;
     }
     .footer {
         height: 450px;
-    }
-    .footer .socials ul {
-        padding-left: 0;
     }
     .footer .socials {
         margin: 20px 0;
