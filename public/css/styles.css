@@ -1,81 +1,3 @@
-
-@font-face {
-    font-family: 'Lato-Black';
-    src: url('fonts/Lato-Black.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-BlackItalic';
-    src: url('fonts/Lato-BlackItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-Bold';
-    src: url('fonts/Lato-Bold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-BoldItalic';
-    src: url('fonts/Lato-BoldItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-Heavy';
-    src: url('fonts/Lato-Heavy.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-HeavyItalic';
-    src: url('fonts/Lato-HeavyItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-Italic';
-    src: url('fonts/Lato-Italic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-LightItalic';
-    src: url('fonts/Lato-LightItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-Medium';
-    src: url('fonts/Lato-Medium.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-MediumItalic';
-    src: url('fonts/Lato-MediumItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-Regular';
-    src: url('fonts/Lato-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-Semibold';
-    src: url('fonts/Lato-Semibold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-SemiboldItalic';
-    src: url('fonts/Lato-SemiboldItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-Thin';
-    src: url('fonts/Lato-Thin.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lato-ThinItalic';
-    src: url('fonts/Lato-ThinItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'MerriweatherSans-Bold';
-    src: url('fonts/MerriweatherSans-Bold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'MerriweatherSans-BoldItalic';
-    src: url('fonts/MerriweatherSans-BoldItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'MerriweatherSans-ExtraBold';
-    src: url('fonts/MerriweatherSans-ExtraBold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'MerriweatherSans-Regular';
-    src: url('fonts/MerriweatherSans-Regular.ttf') format('truetype');
-}
-
 body {
     font-family: 'Lato-Regular';
     letter-spacing: 1.5px;
@@ -107,15 +29,13 @@ body div.section-parent {
     color: #f87616;
     background-color: #eee;
 }
-p {
-    letter-spacing: 2px;
-}
+
 .text-primary {
     color: #F3801E !important;
 }
 .btn {
     letter-spacing: 3px;
-    font-size: 15px;
+    font-size: 18px;
 }
 .btn-flat {
     border-radius: 2px !important;
@@ -127,16 +47,31 @@ p {
 }
 
 .btn-blue {
-    background-color: #4F9CD9;
-    border-color: #4F9CD9;
+    font-family: 'MerriweatherSans-Bold';
+    background-color: #63D6F0;
+    border-color: #63D6F0;
     color: #fff;
     padding: 10px 25px;
 }
-.btn-blue:hover {
+.btn-blue:hover, .btn-blue:active {
     background-color: #54ABE0;
     border-color: #2CA3DD;
     color: #fff;
 }
+
+.btn-home {
+    font-family: 'MerriweatherSans-Bold';
+    background-color: #54AAE0;
+    border-color: #54AAE0;
+    color: #fff;
+    padding: 15px 30px;
+}
+.btn-home:hover, .btn-home:active {
+    background-color: #4686CA;
+    border-color: #4686CA;
+    color: #fff;
+}
+
 .btn-primary {
     background-color: transparent !important;
     border-color: #F3801E !important;
@@ -146,6 +81,13 @@ p {
 .navbar .btn {
     padding: 10px 14px !important;
     margin: 3px !important;
+}
+
+hr.orange-line {
+    border: #F37C00 solid 2px;
+    margin: 0;
+    width: 13%;
+    float: left;
 }
 
 .shape1 {
@@ -223,29 +165,34 @@ p {
 /* section home styles
 -------------------------------------------------- */
 #home {
-    padding-top: 100px;
+    padding-top: 150px;
     position: relative;
     height: 100vh;
     min-height: 700px;
     z-index: 1;
 }
-#home .sub-header {
-    color: #333333;
+
+#home .header-content {
+    padding: 50px 50px 50px 150px;
+}
+
+#home .header-content h1 {
+    color: #F4822B;
+    font-family: 'MerriweatherSans-ExtraBold';
+    font-size: 4em;
+}
+
+#home .header-content h4 {
     font-family: 'Lato-Bold';
+}
+
+#home .header-content p {
     font-size: 20px;
-    margin-bottom: -10px;
+    color: #7C7D7E;
+    line-height: 35px;
+    margin: 10px 0 30px;
 }
-#home p {
-    font-size: 17px;
-}
-#home .text-content {
-    padding: 5% 0 0 8%;
-}
-#home .text-header {
-    color: #F5822A;
-    font-family: 'Lato-Heavy';
-    font-size: 3em;
-}
+
 #home .line {
     position: absolute;
     z-index: -1;
@@ -254,10 +201,10 @@ p {
     height: 340px;
     width: 160%;
     transform: rotate(150deg);
-    background: -webkit-linear-gradient(-90deg, #F58D2B, #FA6203); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(-90deg, #F58D2B, #FA6203); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(-90deg, #F58D2B, #FA6203); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(-90deg, #F58D2B, #FA6203); /* Standard syntax */
+    background: -webkit-linear-gradient(-90deg, #F7A21B, #FA6509); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #F7A21B, #FA6509); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #F7A21B, #FA6509); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #F7A21B, #FA6509); /* Standard syntax */
 }
 #home img {
     padding-top: 50px;
@@ -265,54 +212,99 @@ p {
 
 /* section about styles
 -------------------------------------------------- */
-#aboutus {
+#aboutUs {
     padding-top: 100px;
     position: relative;
     height: auto;
     min-height: 920px;
     z-index: 1;
 }
-#aboutus hr {
-    border: #F37C00 solid 2px;
-    margin-left: 0;
+#aboutUs .text-content {
+    position: relative;
+    height: 335px;
 }
-#aboutus .text-content p {
-    font-size: 15px;
-    max-width: 53vh;
+#aboutUs .text-content hr {
+    border: #F37C00 solid 2px;
+    margin: 0;
+    bottom:0;
+    width: 100%;
+    position: absolute;
+}
+#aboutUs .text-content p {
+    font-size: 18px;
+    max-width: 45vh;
     padding: 10px;
+    position: absolute;
     color: #fff;
     border-left: #fff solid 3px;
+    left: 0;
+    top: 25%;
 }
-#aboutus .logo p {
+
+#aboutUs .logo p {
     color: #777;
-    font-size: 17px;
-    padding: 20px;
+    font-size: 18px;
+    padding: 20px 50px 20px;
+    line-height: 35px;
 }
-#aboutus .logo img {
+
+
+#aboutUs .logo hr.orange-vertical-line {
+    background: #F37C02;
+    border: #F37C02 solid 8px;
+    margin: 0;
+    height: 450px;
+    top: -55%;
+    right: 10%;
+    position: absolute;
+}
+
+#aboutUs .logo img {
     display: block;
     margin: auto;
-    width: 55%;
+    width: 50%;
 }
-#aboutus .feature {
+
+#aboutUs .feature {
     padding-top: 50px;
 }
-#aboutus .feature img {
-    display: block;
+
+#aboutUs .feature .container>div {
+    margin-top: 100px;
+}
+
+#aboutUs .feature h1 {
+    color: #4EA9E0;
+    font-family: 'MerriweatherSans-ExtraBold';
+    font-size: 4em;
+    text-align: center;
+}
+
+#aboutUs .feature img {
     margin: auto;
     width: auto;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
 }
 
-#aboutus .feature p {
+#aboutUs .feature .feature-description {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#aboutUs .feature p {
     color: #777;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: 1.5px;
 }
 
-#aboutus .feature p.text-primary {
-    font-size: 15px;
+#aboutUs .feature h2 {
     font-family: 'MerriweatherSans-ExtraBold';
-    text-align: center;
-    padding-top: 15px;
 }
 
 /* section products styles
@@ -320,9 +312,19 @@ p {
 #products {
     height: auto;
     z-index: 1;
-    min-height: 400px;
-    margin: 100px;
+    min-height: 500px;
+    margin: 0 100px 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
+#products h1 {
+    font-family: 'MerriweatherSans-ExtraBold';
+    font-size: 4em;
+    text-align: center;
+    padding: 100px;
+}
+
 #products .single-item {
     height: 90%;
     position: relative;
@@ -385,21 +387,15 @@ p {
     margin: 10% -10% 0 10%;
 }
 
-#partners .text-content .text-header {
-    font-size: 20px;
-    color: #F3801E;
+#partners .text-content h2 {
     font-family: 'MerriweatherSans-ExtraBold';
-}
-#partners .text-content hr {
-    border: #F37C00 solid 2px;
-    margin: 0;
-    width: 13%;
-    float: left;
 }
 
 #partners .text-content .text-description {
-    max-width: 75%;
-    font-size: 17px;
+    max-width: 85%;
+    font-size: 18px;
+    line-height: 35px;
+    color: #777;
 }
 
 #partners .comments {
@@ -416,20 +412,16 @@ p {
 }
 #partners .comments .text-header {
     color: #717273;
-    font-size: 16px;
+    font-size: 2.5em;
     position: relative;
     font-family: 'Lato-Bold';
 }
 
 #partners .comments .text-description {
-    font-size: 17px;
-}
-
-#partners .personal-information .info {
-    padding-top: 50px;
-}
-#partners .personal-information {
-    margin-top: 50px;
+    font-size: 15px;
+    color: #777;
+    line-height: 30px;
+    max-width: 85%;
 }
 
 #partners .personal-information .name {
@@ -446,6 +438,14 @@ p {
     font-size: 17px;
 }
 
+#partners .personal-information .pic,
+#partners .personal-information .info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 250px;
+}
+
 /* section contact-us styles
 -------------------------------------------------- */
 #contact-us {
@@ -459,9 +459,7 @@ p {
     margin: 10% -10% 0 10%;
 }
 
-#contact-us .text-content .text-header {
-    font-size: 20px;
-    color: #F3801E;
+#contact-us .text-content h2 {
     font-family: 'MerriweatherSans-ExtraBold';
 }
 #contact-us .text-content hr {
@@ -473,7 +471,10 @@ p {
 
 #contact-us .text-content .text-description {
     max-width: 75%;
-    font-size: 17px;
+    font-size: 18px;
+    color: #777;
+    line-height: 35px;
+    margin-top: 20px;
 }
 #contact-us .well {
     background-color: #fff;
@@ -499,13 +500,13 @@ p {
     z-index: 1;
 }
 #contact-us .blue-gradient {
-    height: 240px;
+    height: 300px;
     width: 110%;
     margin: 0 -30px;
-    background: -webkit-linear-gradient(-90deg, #54BEE1, #335CAB);
-    background: -o-linear-gradient(-90deg, #54BEE1, #335CAB);
-    background: -moz-linear-gradient(-90deg, #54BEE1, #335CAB);
-    background: linear-gradient(-90deg, #54BEE1, #335CAB);
+    background: -webkit-linear-gradient(-90deg, #54E0DE, #3661AF);
+    background: -o-linear-gradient(-90deg, #54E0DE, #3661AF);
+    background: -moz-linear-gradient(-90deg, #54E0DE, #3661AF);
+    background: linear-gradient(-90deg, #54E0DE, #3661AF);
     position: absolute;
     bottom: 0;
     z-index: 0;
@@ -513,7 +514,6 @@ p {
 
 .map.container-fluid {
     z-index: 1;
-    margin: -10px;
     position: relative;
 }
 .map.container-fluid .well {
@@ -522,12 +522,10 @@ p {
     border-radius: 0;
     position: absolute;
     z-index: 1;
-    left: 20px;
-    top: 23%;
+    left: 0;
+    top: 25%;
 }
-.map.container-fluid .well .text-header {
-    font-size: 20px;
-    color: #F3801E;
+.map.container-fluid .well h1 {
     font-family: 'MerriweatherSans-ExtraBold';
 }
 .map.container-fluid .well hr {
@@ -539,6 +537,7 @@ p {
 
 .map .text-description {
     font-size: 17px;
+    color: #777;
 }
 
 /* Sticky footer styles
@@ -607,99 +606,32 @@ footer.footer ul li {
     margin: -3% 10%;
 }
 
-@media screen and (max-width: 2560px) and (min-width: 1681px){
+@media screen and (max-width: 1600px) and (min-width: 992px){
     #home .line {
+        bottom: -20%;
         left: -30%;
-        height: 700px;
-    }
-    .container {
-        width: 2300px;
-    }
-    #products .single-item img.landscape-img {
-        width: 550px;
-        top: 42%;
-    }
-    #products .single-item img {
-        top: 45%;
-        width: 300px;
-        left: 20%;
-    }
-    #partners {
-        height: 50vh;
-    }
-    #contact-us .well {
-        margin: 0 180px;
-    }
-    #contact-us {
-        height: 60vh;
-    }
-    .footer .text-content {
-        margin: 2% -10% 0 10%;
-    }
-    .footer .copyright {
-        margin: -1.6% 10%;
-    }
-    #aboutus .text-content p {
-        max-width: 43vh;
-    }
-}
-@media screen and (max-width: 1680px) and (min-width: 1550px){
-    #home .line {
-        left: -25%;
-    }
-    #aboutus .text-content p {
-        max-width: 40vh;
-    }
-    #partners {
-        height: 65vh;
-    }
-    #contact-us {
-        height: 90vh;
+        transform: rotate(145deg);
     }
 }
 
-@media screen and (max-width: 1280px) and (min-width: 1025px){
-    #home .line {
-        bottom: -15%;
-        left: -30%;
-        height: 400px;
-        transform: rotate(145deg);
-    }
+@media screen and (max-width: 1441px) and (min-width: 769px) {
     #partners .comments .quote {
-        top: -90%;
+        top: -100% !important;
     }
-    #partners .personal-information .name, #partners .personal-information .company {
-        font-size: 15px;
+}
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    #partners .comments .quote {
+        top: -60% !important;
     }
-    #contact-us .well form div.col-xs-12 {
-        padding: 10px 20px;
-    }
-    #contact-us {
-        height: 110vh;
-    }
-    #products .single-item img {
-        top: 20% !important;
-    }
-    #products .single-item img.landscape-img {
-        top: 35%;
-    }
-    #partners {
-        height: 70vh;
+}
+
+@media screen and (max-width: 1280px) and (min-width: 550px) {
+    #home .header-content {
+        padding: 50px 50px 50px 50px;
     }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 963px){
-    #home .line {
-        height: 260px;
-        width: 180%;
-        bottom: -5%;
-    }
-    #home {
-        min-height: 90vh;
-    }
-    #aboutus .feature img {
-        height: 150px;
-    }
     #products .slick-caption {
         left: 50% !important;
         bottom: 20% !important;
@@ -709,22 +641,6 @@ footer.footer ul li {
     }
     #products .single-item img.landscape-img {
         top: 57% !important;
-    }
-    #partners .personal-information .info {
-        padding-top: 25px;
-    }
-    #partners {
-        height: 80vh;
-    }
-    #partners img {
-        height: 100px;
-        width: 100px;
-    }
-    #contact-us .well {
-         margin: 0;
-    }
-    #contact-us {
-        height: 150vh;
     }
     .footer {
         height: 385px;
@@ -739,38 +655,120 @@ footer.footer ul li {
         padding: 6px 8px;
     }
     #contact-us .well {
-        margin: 0 30px;
+        margin: 0 !important;
+    }
+    #contact-us .text-content {
+        margin: 10% 0 !important;
     }
 }
-@media screen and (max-width: 962px) and (min-width: 768px) {
-    #contact-us {
-        min-height: 600px !important;
-        height: 600px;
+
+@media screen and (max-width: 1024px) {
+    hr.orange-vertical-line {
+        display: none;
+    }
+    #contact-us .text-content {
+        margin: 10% 0;
     }
 }
-@media screen and (max-width: 962px) and (min-width: 400px){
+
+@media (max-width: 991px) and (min-width: 769px){
     #home .line {
-        height: 270px;
-        width: 200%;
-        left: -45%;
-        bottom: -9%;
-        transform: rotate(150deg);
+        bottom: -25%;
+        left: -30%;
+        width: 160%;
+        transform: rotate(145deg);
     }
-    #aboutus .logo p {
-        font-size: 15px;
+}
+
+@media (max-width: 768px){
+    #home .line {
+        display: none;
     }
-    #aboutus .text-content p {
-        color: #333;
-        max-width: 100%; 
+    #aboutUs .text-content p {
+         max-width: 100%;
+         padding: 20px;
+         position: relative;
+         color: #777;
+         border-left: #777 solid 3px;
+         left: 0;
+         top: 0;
     }
-    #aboutus .feature p.text-primary {
-        font-size: 17px;
+    #aboutUs .text-content {
+        height: auto;
     }
-    #aboutus .feature p {
-        font-size: 14px;
-        padding: 10px 0;
+
+}
+@media (max-width: 549px) {
+
+    #aboutUs .feature h1,
+    #home .header-content h1 {
+        font-size: 3.5em;
+    }
+
+    #home .header-content p,
+    #aboutUs .feature p, #aboutUs .logo p,
+    #partners .text-content .text-description,
+    #contact-us .text-content .text-description {
+        font-size: 16px;
         text-align: center;
     }
+
+    #aboutUs .feature h2 {
+        text-align: center;
+    }
+
+    #products h1 {
+        font-size: 3em;
+        padding: 0 0 50px;
+    }
+
+    #aboutUs .logo p {
+        padding: 20px 0;
+    }
+
+    #partners .comments .text-header {
+        font-size: 2em;
+    }
+
+    #partners .comments .quote {
+        font-size: 3em;
+        top: -60%;
+    }
+
+    #partners .comments .text-description {
+        max-width: 100%;
+    }
+
+    #partners img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .map.container-fluid {
+        padding: 10px 0 0;
+    }
+
+    .map.container-fluid .well {
+        position: relative;
+    }
+
+    #aboutUs .feature .container > div {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px){
+    #aboutUs .text-content hr {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 962px) {
+
+    #home .header-content {
+        padding: 0;
+    }
+
     #home .text-content, #products .text-content, #contact-us .text-content,
     .map.container-fluid .text-content {
         margin: 10px 0 !important;
@@ -781,13 +779,14 @@ footer.footer ul li {
     }
     #products .single-item .slick-caption {
         width: 100%;
-        margin-left: 0px; 
+        margin-left: 0px;
+        text-align: center;
     }
     #products .single-item .item {
         display: block;
     }
     #partners {
-        height: 750px;
+        height: 850px;
     }
     #partners .personal-information .info {
         text-align: center;
@@ -804,6 +803,8 @@ footer.footer ul li {
     }
     #contact-us {
         min-height: 900px;
+        height: auto;
+        padding: 50px 0;
     }
     #contact-us .well form div.col-xs-12 {
         padding: 5px 10px;
