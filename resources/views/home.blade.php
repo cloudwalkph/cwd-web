@@ -300,9 +300,6 @@
             </div>
         </footer>
 
-
-
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAueyHwdNHm7u2X68gb-4YuncJzRFDoyYI&callback=initMap"></script>
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('css/slick/slick.min.js') }}" ></script>
@@ -406,5 +403,6 @@
                 }
             }
         </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAueyHwdNHm7u2X68gb-4YuncJzRFDoyYI&callback=initMap"></script>
     </body>
 </html>
