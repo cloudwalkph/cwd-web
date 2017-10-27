@@ -702,18 +702,48 @@ footer.footer ul li {
 
     #aboutUs .feature h1,
     #home .header-content h1 {
-        font-size: 3.5em;
+        font-size: 3em;
+    }
+
+    #home .header-content {
+        text-align: center;
+    }
+    #aboutUs .logo img {
+        width: 100%;
+    }
+
+    #aboutUs .text-content p {
+        padding: 0;
+        border-left: none;
+        text-align: center;
+    }
+
+    #aboutUs .feature,
+    #aboutUs .feature .container,
+    #aboutUs .feature-description {
+        padding: 0;
+    }
+    #aboutUs .feature img {
+        height: 230px;
     }
 
     #home .header-content p,
     #aboutUs .feature p, #aboutUs .logo p,
     #partners .text-content .text-description,
     #contact-us .text-content .text-description {
-        font-size: 16px;
+        font-size: 13px;
         text-align: center;
     }
 
     #aboutUs .feature h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    hr.orange-line {
+        margin-bottom: 0;
+        width: 50%;
+        float: initial;
         text-align: center;
     }
 
