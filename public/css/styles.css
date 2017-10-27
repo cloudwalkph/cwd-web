@@ -94,9 +94,9 @@ hr.orange-line {
     position: fixed;
     left: 5%;
     z-index: 0;
-    -webkit-animation:spin 12s linear infinite, floatBubble1 7s infinite  normal ease-out;
-    -moz-animation:spin 12s linear infinite, floatBubble1 7s infinite  normal ease-out;
-    animation:spin 12s linear infinite, floatBubble1 7s infinite  normal ease-out;
+    -webkit-animation:spin 8s linear infinite, floatBubble1 4s infinite  normal ease-out;
+    -moz-animation:spin 8s linear infinite, floatBubble1 4s infinite  normal ease-out;
+    animation:spin 8s linear infinite, floatBubble1 4s infinite  normal ease-out;
     -webkit-animation-direction:alternate;
 }
 .shape2 {
@@ -112,9 +112,9 @@ hr.orange-line {
     position: fixed;
     left: 45%;
     z-index: 0;
-    -webkit-animation:reverseSpin 12s linear infinite, floatBubble2 7s infinite  normal ease-out;
-    -moz-animation:reverseSpin 12s linear infinite, floatBubble2 7s infinite  normal ease-out;
-    animation:reverseSpin 12s linear infinite, floatBubble2 7s infinite  normal ease-out;
+    -webkit-animation:reverseSpin 10s linear infinite, floatBubble2 7s infinite  normal ease-out;
+    -moz-animation:reverseSpin 10s linear infinite, floatBubble2 7s infinite  normal ease-out;
+    animation:reverseSpin 10s linear infinite, floatBubble2 7s infinite  normal ease-out;
     -webkit-animation-direction:alternate;
 }
 
@@ -127,34 +127,34 @@ hr.orange-line {
 @keyframes reverseSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
 @-webkit-keyframes floatBubble1{
- from{
-    top:150px;
-    -webkit-animation-timing-function: ease-in;
-   }
-   to {
-      top: 250px;
-      -webkit-animation-timing-function: ease-out;
-   }
+    from{
+        top:150px;
+        -webkit-animation-timing-function: ease-in;
+    }
+    to {
+        top: 250px;
+        -webkit-animation-timing-function: ease-out;
+    }
 }
 
 @-webkit-keyframes floatBubble2{
- from{
-     top:250px;
-     -webkit-animation-timing-function: ease-in;
+    from{
+        top:250px;
+        -webkit-animation-timing-function: ease-in;
     }
     to {
-       top: 350px;
-       -webkit-animation-timing-function: ease-out;
+        top: 350px;
+        -webkit-animation-timing-function: ease-out;
     }
 }
 @-webkit-keyframes floatBubble3{
- from{
-     top:550px;
-     -webkit-animation-timing-function: ease-in;
+    from{
+        top:550px;
+        -webkit-animation-timing-function: ease-in;
     }
     to {
-       top: 650px;
-       -webkit-animation-timing-function: ease-out;
+        top: 650px;
+        -webkit-animation-timing-function: ease-out;
     }
 }
 

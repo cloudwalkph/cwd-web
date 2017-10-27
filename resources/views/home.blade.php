@@ -22,11 +22,6 @@
                 width: 104%;
                 margin-left: -2%;
             }
-            canvas {
-                position: fixed;
-                height:100vh;
-                z-index: 0;
-            }
         </style>
 
     </head>
@@ -50,17 +45,17 @@
                         <li><a href="#home">HOME</a></li>
                         <li><a href="#aboutUs">ABOUT</a></li>
                         <li><a href="#products">PRODUCTS</a></li>
-                        <li><a href="#partners">PARTNERS</a></li>
+                        {{--<li><a href="#partners">PARTNERS</a></li>--}}
                         <li><a href="#contact-us" class="btn btn-primary btn-flat">CONTACT US</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <canvas id="circles"></canvas>
         <div class="container-fluid section-parent">
             <!-- SHAPES -->
-            <img src="/images/shapes/rec1.png" alt="Rectangle" class="shape1">
+            <div class="shape-container--1 shape-animation"><div class="random-shape"><img src="/images/shapes/rec1.png" alt="Rectangle" class="shape1"></div></div>
+
             <img src="/images/shapes/poly2.png" alt="Poly2" class="shape2">
             <img src="/images/shapes/poly1.png" alt="Poly1" class="shape3">
             <!-- HOME -->
@@ -208,27 +203,27 @@
             </div>
 
             <!-- PARTNERS -->
-            <div id="partners" class="target">
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-content">
-                    <h2 class="text-primary">Customer Feedback</h2>
-                    <hr class="orange-line"><br>
+            {{--<div id="partners" class="target">--}}
+                {{--<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-content">--}}
+                    {{--<h2 class="text-primary">Customer Feedback</h2>--}}
+                    {{--<hr class="orange-line"><br>--}}
 
-                    <p class="text-description">We’ve worked with some of the world’s best customers. Helping these guys succeed with a little help from us was a pretty fulfilling experience for us. We hope to add you here!</p>
-                </div>
-                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 comments">
-                    <p class="text-header"><span class="quote">“</span>The best Digital Agency since sliced bread!</p>
-                    <p class="text-description">How’s business? Boomin. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. Surround yourself with angels.</p>
-                    <div class="personal-information">
-                        <div class="col-md-4 col-sm-6 col-xs-4 pic">
-                            <img src="/images/thompson.png" alt="Medix" class="img-circle" width="150" height="150">
-                        </div>
-                        <div class="col-md-8 col-sm-6 col-xs-8 info">
-                            <p class="name">Jonathan L. Simmons</p>
-                            <p class="company">Blade and Babe Inc.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    {{--<p class="text-description">We’ve worked with some of the world’s best customers. Helping these guys succeed with a little help from us was a pretty fulfilling experience for us. We hope to add you here!</p>--}}
+                {{--</div>--}}
+                {{--<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 comments">--}}
+                    {{--<p class="text-header"><span class="quote">“</span>The best Digital Agency since sliced bread!</p>--}}
+                    {{--<p class="text-description">How’s business? Boomin. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. Surround yourself with angels.</p>--}}
+                    {{--<div class="personal-information">--}}
+                        {{--<div class="col-md-4 col-sm-6 col-xs-4 pic">--}}
+                            {{--<img src="/images/thompson.png" alt="Medix" class="img-circle" width="150" height="150">--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-8 col-sm-6 col-xs-8 info">--}}
+                            {{--<p class="name">Jonathan L. Simmons</p>--}}
+                            {{--<p class="company">Blade and Babe Inc.</p>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
             <!-- CONTACT US -->
             <div id="contact-us" class="container-fluid target">
@@ -380,93 +375,6 @@
                 });
             })
 
-        </script>
-
-        <script>
-            var mainCanvas = document.getElementById("circles");
-            var mainContext = mainCanvas.getContext('2d');
-
-            var circles = [];
-
-            function Circle(radius, speed, width, xPos, yPos, red, blue, green) {
-                this.radius = radius;
-                this.speed = speed;
-                this.width = width;
-                this.xPos = xPos;
-                this.yPos = yPos;
-                this.red = red;
-                this.blue = blue;
-                this.green = green;
-                this.opacity = 0.05 + Math.random() * 0.5;
-
-                this.counter = 0;
-
-                var signHelper = Math.floor(Math.random() * 2);
-
-                if (signHelper == 1) {
-                    this.sign = -1;
-                } else {
-                    this.sign = 1;
-                }
-            }
-
-            Circle.prototype.update = function() {
-
-                this.counter += this.sign * this.speed;
-
-                mainContext.beginPath();
-
-                mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
-                    this.yPos + Math.sin(this.counter / 100) * this.radius,
-                    this.width,
-                    0,
-                    Math.PI * 2,
-                    false);
-
-                mainContext.closePath();
-
-                mainContext.fillStyle = 'rgba('+ this.red +','+ this.blue +','+ this.green +', ' + this.opacity + ')';
-                mainContext.fill();
-            };
-
-            function drawCircles() {
-                var randomX = 0;
-                var randomY = 0;
-                var speed = 0;
-                var size = 0;
-                var circle = [];
-
-                for (var i = 0; i < 50; i++) {
-                    randomX = Math.round(-200 + Math.random() * 700);
-                    randomY = Math.round(-200 + Math.random() * 700);
-                    speed = 0.2 + Math.random() * 2;
-                    size = 1 + Math.random() * 10;
-
-                    circle = new Circle(100, speed, size, randomX, randomY, '243', '128', '30');
-                    circles.push(circle);
-                }
-                for (var j = 0; j < 50; j++) {
-                    randomX = Math.round(-200 + Math.random() * 700);
-                    randomY = Math.round(-200 + Math.random() * 700);
-                    speed = 0.2 + Math.random() * 2;
-                    size = 1 + Math.random() * 10;
-
-                    circle = new Circle(100, speed, size, randomX, randomY, '54', '98', '175');
-                    circles.push(circle);
-                }
-                draw();
-            }
-            drawCircles();
-
-            function draw() {
-                mainContext.clearRect(0, 0, 500, 500);
-
-                for (var i = 0; i < circles.length; i++) {
-                    var myCircle = circles[i];
-                    myCircle.update();
-                }
-                requestAnimationFrame(draw);
-            }
         </script>
 
         <script type="text/javascript">
