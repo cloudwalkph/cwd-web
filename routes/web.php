@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::post('/contact-us', 'ContactUsController@sendEmail');
+
+Route::get('/email', function () {
+    return view('email.registration');
+});
+

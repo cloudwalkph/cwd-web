@@ -24,6 +24,9 @@
             }
         </style>
 
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
     </head>
     <body>
 
@@ -175,28 +178,28 @@
                         <img src="/images/photolive-logo.png" alt="Photolive">
                         <div class="slick-caption">
                             <span>Photolive</span> a first of its kind modern, digital photo booth that combines sophisticated design with the latest in digital technology creating a memorable experience for you and your guests. <br>
-                            <a href="http://photolive.com.ph/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
+                            <a href="http://photolive.com.ph/" target=_blank class="btn btn-blue btn-flat btn-lg hide">VISIT SITE</a>
                         </div>
                     </div>
                     <div class="item">
                         <img src="/images/bolooka-logo.png" alt="Bolooka" width="250">
                         <div class="slick-caption">
                             <span>Bolooka</span> is an e-commerce platform that provides an exclusive marketplace for local merchants and artists who create only the best products in the country. <br>
-                            <a href="http://www.bolooka.com/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
+                            <a href="http://www.bolooka.com/" target=_blank class="btn btn-blue btn-flat btn-lg hide">VISIT SITE</a>
                         </div>
                     </div>
                     <div class="item">
                         <img src="/images/medix-logo.png" alt="Medix" width="250">
                         <div class="slick-caption">
                             <span>Medix</span> is a cloud-based clinic management software that helps healthcare practitioners improve their clinic operations using just one quick and easy service. <br>
-                            <a href="https://www.medix.ph/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
+                            <a href="https://www.medix.ph/" target=_blank class="btn btn-blue btn-flat btn-lg hide">VISIT SITE</a>
                         </div>
                     </div>
                     <div class="item">
                         <img src="/images/verify-logo.png" alt="Verify" width="250">
                         <div class="slick-caption">
                             <span>Verify</span> is a platform that helps companies and organizations track and record the activities and performance deployed manpower and teams <br>
-                            <a href="http://project-verify.medix.ph/" target=_blank class="btn btn-blue btn-flat btn-lg">VISIT SITE</a>
+                            <a href="http://verify.cloudwalkdigital.com/" target=_blank class="btn btn-blue btn-flat btn-lg hide">VISIT SITE</a>
                         </div>
                     </div>
                 </div>
@@ -234,25 +237,37 @@
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 form-container">
                     <div class="well">
-                        <form class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="first_name" class="form-control">
+                        <form class="row" name="sentMessage" id="contactForm" novalidate>
+                            <input type="text" class="token" name="_token" value="{{ csrf_token() }}" hidden>
+                            <div class="col-sm-12"><div id="success"></div></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <p class="help-block text-danger"></p>
+                                <input type="text" name="first_name" class="form-control" id="first_name"
+                                       required data-validation-required-message="Please enter your first name.">
                                 <label for="first_name" class="label-control">FIRST NAME</label>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="last_name" class="form-control">
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <p class="help-block text-danger"></p>
+                                <input type="text" name="last_name" class="form-control" id="last_name"
+                                       required data-validation-required-message="Please enter your last name.">
                                 <label for="last_name" class="label-control">LAST NAME</label>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="email" name="email" class="form-control">
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <p class="help-block text-danger"></p>
+                                <input type="email" name="email" class="form-control" id="email"
+                                       required data-validation-required-message="Please enter your email address.">
                                 <label for="email" class="label-control">EMAIL ADDRESS</label>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="phone" class="form-control">
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <p class="help-block text-danger"></p>
+                                <input type="text" name="phone" class="form-control" id="phone"
+                                       required data-validation-required-message="Please enter your phone.">
                                 <label for="phone" class="label-control">PHONE</label>
                             </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <textarea class="form-control" name="message" rows="5" cols="80" style="resize: none"></textarea>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <p class="help-block text-danger"></p>
+                                <textarea class="form-control" name="message" rows="5" cols="80" style="resize: none" id="message"
+                                          required data-validation-required-message="Please enter your message."></textarea>
                                 <label for="message" class="label-control">MESSAGE</label>
                             </div>
 
@@ -260,7 +275,7 @@
                                 {!! Recaptcha::render() !!}
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <button type="submit" name="submit" class="btn btn-block btn-blue">SUBMIT</button>
+                                <button type="submit" id="btn-submit" name="submit" class="btn btn-block btn-blue">SUBMIT</button>
                             </div>
                         </form>
                     </div>
@@ -303,6 +318,8 @@
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('css/slick/slick.min.js') }}" ></script>
+        <script src="{{ asset('js/jqBootstrapValidation.js') }}"></script>
+        <script src="{{ asset('js/contact_me.js') }}"></script>
         <script>
             $(document).ready(function(){
                 $('.single-item').slick({
@@ -372,6 +389,9 @@
                 });
             })
 
+        </script>
+        <script>
+            $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
         </script>
 
         <script type="text/javascript">

@@ -14,6 +14,9 @@ body div.section-parent {
     height: auto;
     margin: -10px 0;
 }
+.text-danger {
+    color: red;
+}
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
     font-size: 17px;
 }
@@ -335,7 +338,7 @@ hr.orange-line {
     font-size: 3em;
 }
 #products .single-item .slick-caption {
-    font-size: 15px;
+    font-size: 18px;
     width: 40%;
     margin-left: 65px;
     color: #6C6D6F;
@@ -496,7 +499,6 @@ hr.orange-line {
 }
 
 #contact-us .form-container {
-    padding-top: 5%;
     z-index: 1;
 }
 #contact-us .blue-gradient {
