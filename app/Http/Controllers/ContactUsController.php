@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SendContactUsRequest;
 use App\Notifications\RegistrationSuccess;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class ContactUsController extends Controller
@@ -15,19 +15,17 @@ class ContactUsController extends Controller
      *
      * @param  Request  $request
      */
-    public function sendEmail(Request $request)
+    public function sendEmail(SendContactUsRequest $request)
     {
-        Validator::make($request->all(), [
-            'g-recaptcha-response' => 'required|recaptcha',
-        ])->validate();
-
         $input = $request->all();
 
-        $emails = ['bm@cloudwalkdigital.com', 'mm@cloudwalkdigital.com'];
+        $emails = ['mm@cloudwalkdigital.com'];
+        $ccMails = ['bm@cloudwalkdigital.com'];
         $bccMail = ['leo.a@cloudwalkdigital.com', 'nina.c@cloudwalkdigital.com'];
 
         foreach( $emails as $email) {
             Mail::to($email)
+                ->cc($ccMails)
                 ->bcc($bccMail)
                 ->send(new RegistrationSuccess($input));
         }
