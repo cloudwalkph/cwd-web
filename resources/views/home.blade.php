@@ -68,7 +68,7 @@
 
                     <p>
                         Let's create something that will convert visitors to instant customers.
-                        With clean and clear UI/UX and branded aesthetics, create valuable qualified leads.
+                        With clean and clear UI/UX and branded aesthetics, start creating valuable qualified leads.
                     </p>
                     <button type="button" class="btn btn-home btn-flat btn-lg">GET ESTIMATE</button>
                 </div>
