@@ -73,7 +73,9 @@
                         Let's create something that will convert visitors to instant customers.
                         With clean and clear UI/UX and branded aesthetics, start creating valuable qualified leads.
                     </p>
-                    <button type="button" class="btn btn-home btn-flat btn-lg">GET ESTIMATE</button>
+                    <div class="button_home">
+                        <a href="#contact-us" class="btn btn-home btn-flat btn-lg">GET ESTIMATE</a>
+                    </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <img src="/images/laptop.png" alt="Laptop" class="img-responsive" style="width: 100%">
@@ -299,7 +301,9 @@
                     <p class="text-header">WORK WITH US TODAY!</p>
                     <p>whatsup@cloudwalkdigital.com</p>
                     <p>(02) 414 4014</p>
-                    <button type="button" class="btn btn-blue btn-flat">START YOUR PROJECT</button>
+                    <div class="button_home">
+                        <a href="#contact-us" class="btn btn-blue btn-flat">START YOUR PROJECT</a>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 socials">
                     <ul>
@@ -354,6 +358,8 @@
                     if (item.length) { return item; }
                  });
 
+                var homeButton = $(".button_home a");
+
                 // Bind click handler to menu items
                 // so we can get a fancy scroll animation
                 menuItems.click(function(e){
@@ -364,6 +370,16 @@
                   }, 850);
                   e.preventDefault();
                 });
+
+                homeButton.click(function(e){
+                    var href = $(this).attr("href"),
+                        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+                    $('html, body').stop().animate({
+                        scrollTop: offsetTop
+                    }, 850);
+                    e.preventDefault();
+                });
+
 
                 // Bind to scroll
                 $(window).scroll(function(){

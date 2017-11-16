@@ -792,6 +792,10 @@ footer.footer ul li {
         padding: 0;
     }
 
+    #home .header-content button {
+
+    }
+
     #home .text-content, #products .text-content, #contact-us .text-content,
     .map.container-fluid .text-content {
         margin: 10px 0 !important;
